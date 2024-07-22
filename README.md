@@ -52,7 +52,8 @@ Navigate to `C:\Users\{your windows user here}\AppData\Roaming\randblem\preferen
 
 ### Relaunch the Application and Authenticate With Your Destiny 2 Login
 
-![image](https://github.com/user-attachments/assets/85e881ba-affe-4d8b-8107-6450ae66f9f6)
+![image](https://github.com/user-attachments/assets/6bc99952-b830-4854-99f9-7f20beef4505)
+
 
 
 
