@@ -24,7 +24,7 @@ To unlink your account, delete the "refresh-token": '' line in your preferences.
 ## [Video Tutorial](https://www.youtube.com/watch?v=eNxvcXVVbOA&feature=youtu.be)
 
 ### 1. Install Release or Clone Source
-https://github.com/kanye4king/RandBlem/releases/tag/main
+[https://github.com/kanye4king/RandBlem/releases/tag/main](https://github.com/kanye4king/RandBlem/releases/tag/v1.0.1)
 
 ### 2. Create a New Destiny 2 API Application 
 
