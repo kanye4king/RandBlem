@@ -37,7 +37,15 @@ class Destiny2Api {
             response = await axios.get(`${this.baseUrl}/Platform/User/GetMembershipsForCurrentUser/`, {
                 headers: this.headers
             });
-            const membershipType = response.data.Response.destinyMemberships[0].applicableMembershipTypes[0];
+            let membershipType;
+            if(response.data.Response.destinyMemberships[0].crossSaveOverride){ // annoying cross save stuff
+                membershipType = response.data.Response.destinyMemberships[0].crossSaveOverride
+                console.log("crossSaveOverride")
+            }
+            else{
+                membershipType = response.data.Response.destinyMemberships[0].applicableMembershipTypes[0];
+            }
+            
             const membershipId = response.data.Response.destinyMemberships[0].membershipId;
             this.currentUser = { membershipType: membershipType, membershipId: membershipId, characters: null };
             this.profile.user = response.data;
