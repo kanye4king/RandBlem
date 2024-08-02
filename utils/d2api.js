@@ -51,6 +51,11 @@ class Destiny2Api {
             this.profile.user = response.data;
             await this.getProfile();
         } catch (error) {
+            const statusCode = error.response.status;
+            if(statusCode == 401) {  // acccess token expired
+                await this.refreshAccessToken();
+                await this.updateEmblem(); //retry the request
+            }
             console.error(`Error fetching profile: ${error.message}\n${error.stack}`);
             throw new Error(`Error fetching profile: ${error.message}`);
         }
